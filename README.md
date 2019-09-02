@@ -6,11 +6,11 @@ spot updates.
 I use a version of USBWebserver that I have updated to latest Apache,PHP,
 MySQL,phpMyAdmin while still keeping it portable.
 
-USBWebserver     : http://www.usbwebserver.net/webserver/
-Apache (Windows) : http://www.apachelounge.com/download/
-PHP (Windows)    : http://windows.php.net
-MySQL (Windows)  : http://dev.mysql.com/downloads/mysql/
-phpMyAdmin       : http://www.phpmyadmin.net
+- USBWebserver     : http://www.usbwebserver.net/webserver/
+- Apache (Windows) : http://www.apachelounge.com/download/
+- PHP (Windows)    : http://windows.php.net
+- MySQL (Windows)  : http://dev.mysql.com/downloads/mysql/
+- phpMyAdmin       : http://www.phpmyadmin.net
 
 ------------
 ## Install Instructions:
