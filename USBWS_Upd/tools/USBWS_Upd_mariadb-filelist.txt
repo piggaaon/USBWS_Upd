@@ -1,0 +1,294 @@
+Folder PATH listing for volume DatPort
+Volume serial number is E6DB-4B40
+E:.
+│   COPYING
+│   COPYING.thirdparty
+│   CREDITS
+│   error.log
+│   EXCEPTIONS-CLIENT
+│   my.ini
+│   README.md
+│   
+├───bin
+│       mysql.exe
+│       mysqladmin.exe
+│       mysqld_usbwv8.exe
+│       
+├───data
+│   │   aria_log.00000001
+│   │   aria_log_control
+│   │   ibdata1
+│   │   IBM778-5C127754H.pid
+│   │   ibtmp1
+│   │   ib_buffer_pool
+│   │   ib_logfile0
+│   │   ib_logfile1
+│   │   multi-master.info
+│   │   pc1.pid
+│   │   
+│   ├───bitvvitdb
+│   │       db.opt
+│   │       playlist_play.frm
+│   │       playlist_play.ibd
+│   │       playlist_played.frm
+│   │       playlist_played.MYD
+│   │       playlist_played.MYI
+│   │       
+│   ├───mysql
+│   │       columns_priv.frm
+│   │       columns_priv.MYD
+│   │       columns_priv.MYI
+│   │       column_stats.frm
+│   │       column_stats.MYD
+│   │       column_stats.MYI
+│   │       db.frm
+│   │       db.MYD
+│   │       db.MYI
+│   │       event.frm
+│   │       event.MYD
+│   │       event.MYI
+│   │       func.frm
+│   │       func.MYD
+│   │       func.MYI
+│   │       general_log.CSM
+│   │       general_log.CSV
+│   │       general_log.frm
+│   │       gtid_slave_pos.frm
+│   │       gtid_slave_pos.ibd
+│   │       help_category.frm
+│   │       help_category.MYD
+│   │       help_category.MYI
+│   │       help_keyword.frm
+│   │       help_keyword.MYD
+│   │       help_keyword.MYI
+│   │       help_relation.frm
+│   │       help_relation.MYD
+│   │       help_relation.MYI
+│   │       help_topic.frm
+│   │       help_topic.MYD
+│   │       help_topic.MYI
+│   │       host.frm
+│   │       host.MYD
+│   │       host.MYI
+│   │       index_stats.frm
+│   │       index_stats.MYD
+│   │       index_stats.MYI
+│   │       innodb_index_stats.frm
+│   │       innodb_index_stats.ibd
+│   │       innodb_table_stats.frm
+│   │       innodb_table_stats.ibd
+│   │       plugin.frm
+│   │       plugin.MYD
+│   │       plugin.MYI
+│   │       proc.frm
+│   │       proc.MYD
+│   │       proc.MYI
+│   │       procs_priv.frm
+│   │       procs_priv.MYD
+│   │       procs_priv.MYI
+│   │       proxies_priv.frm
+│   │       proxies_priv.MYD
+│   │       proxies_priv.MYI
+│   │       roles_mapping.frm
+│   │       roles_mapping.MYD
+│   │       roles_mapping.MYI
+│   │       servers.frm
+│   │       servers.MYD
+│   │       servers.MYI
+│   │       slow_log.CSM
+│   │       slow_log.CSV
+│   │       slow_log.frm
+│   │       tables_priv.frm
+│   │       tables_priv.MYD
+│   │       tables_priv.MYI
+│   │       table_stats.frm
+│   │       table_stats.MYD
+│   │       table_stats.MYI
+│   │       time_zone.frm
+│   │       time_zone.MYD
+│   │       time_zone.MYI
+│   │       time_zone_leap_second.frm
+│   │       time_zone_leap_second.MYD
+│   │       time_zone_leap_second.MYI
+│   │       time_zone_name.frm
+│   │       time_zone_name.MYD
+│   │       time_zone_name.MYI
+│   │       time_zone_transition.frm
+│   │       time_zone_transition.MYD
+│   │       time_zone_transition.MYI
+│   │       time_zone_transition_type.frm
+│   │       time_zone_transition_type.MYD
+│   │       time_zone_transition_type.MYI
+│   │       transaction_registry.frm
+│   │       transaction_registry.ibd
+│   │       user.frm
+│   │       user.MYD
+│   │       user.MYI
+│   │       
+│   ├───performance_schema
+│   │       db.opt
+│   │       
+│   ├───pfdb
+│   │       db.opt
+│   │       pf_movies_main.frm
+│   │       pf_movies_main.MYD
+│   │       pf_movies_main.MYI
+│   │       pf_tv_eps_list.frm
+│   │       pf_tv_eps_list.MYD
+│   │       pf_tv_eps_list.MYI
+│   │       pf_tv_main.frm
+│   │       pf_tv_main.MYD
+│   │       pf_tv_main.MYI
+│   │       pf_tv_watch_list.frm
+│   │       pf_tv_watch_list.MYD
+│   │       pf_tv_watch_list.MYI
+│   │       playlist_current.frm
+│   │       playlist_current.ibd
+│   │       
+│   ├───vcmngrdb
+│   │       a_vcmngt_series.frm
+│   │       a_vcmngt_series.ibd
+│   │       a_vcmngt_vidinfo.frm
+│   │       a_vcmngt_vidinfo.ibd
+│   │       db.opt
+│   │       vcmngr_facebook_post.frm
+│   │       vcmngr_facebook_post.ibd
+│   │       vcmngr_twitter_post.frm
+│   │       vcmngr_twitter_post.ibd
+│   │       vcmngr_youtube_channel.frm
+│   │       vcmngr_youtube_channel.ibd
+│   │       vcmngr_youtube_playlist.frm
+│   │       vcmngr_youtube_playlist.ibd
+│   │       vcmngr_youtube_video.frm
+│   │       vcmngr_youtube_video.ibd
+│   │       vcmngr_youtube_video_detail.frm
+│   │       vcmngr_youtube_video_detail.ibd
+│   │       
+│   └───vvccmngrdb
+│           db.opt
+│           vvccmngr_production.frm
+│           vvccmngr_production.ibd
+│           vvccmngr_prod_type.frm
+│           vvccmngr_prod_type.ibd
+│           vvccmngr_release.frm
+│           vvccmngr_release.ibd
+│           vvccmngr_ytb_chan.frm
+│           vvccmngr_ytb_chan.ibd
+│           vvccmngr_ytb_plylst.frm
+│           vvccmngr_ytb_plylst.ibd
+│           vvccmngr_ytb_vid.frm
+│           vvccmngr_ytb_vid.ibd
+│           
+└───share
+    │   errmsg-utf8.txt
+    │   fill_help_tables.sql
+    │   install_spider.sql
+    │   maria_add_gis_sp.sql
+    │   maria_add_gis_sp_bootstrap.sql
+    │   mysql_performance_tables.sql
+    │   mysql_system_tables.sql
+    │   mysql_system_tables_data.sql
+    │   mysql_test_data_timezone.sql
+    │   mysql_test_db.sql
+    │   mysql_to_mariadb.sql
+    │   
+    ├───charsets
+    │       armscii8.xml
+    │       ascii.xml
+    │       cp1250.xml
+    │       cp1251.xml
+    │       cp1256.xml
+    │       cp1257.xml
+    │       cp850.xml
+    │       cp852.xml
+    │       cp866.xml
+    │       dec8.xml
+    │       geostd8.xml
+    │       greek.xml
+    │       hebrew.xml
+    │       hp8.xml
+    │       Index.xml
+    │       keybcs2.xml
+    │       koi8r.xml
+    │       koi8u.xml
+    │       latin1.xml
+    │       latin2.xml
+    │       latin5.xml
+    │       latin7.xml
+    │       macce.xml
+    │       macroman.xml
+    │       README
+    │       swe7.xml
+    │       
+    ├───czech
+    │       errmsg.sys
+    │       
+    ├───danish
+    │       errmsg.sys
+    │       
+    ├───dutch
+    │       errmsg.sys
+    │       
+    ├───english
+    │       errmsg.sys
+    │       
+    ├───estonian
+    │       errmsg.sys
+    │       
+    ├───french
+    │       errmsg.sys
+    │       
+    ├───german
+    │       errmsg.sys
+    │       
+    ├───greek
+    │       errmsg.sys
+    │       
+    ├───hindi
+    │       errmsg.sys
+    │       
+    ├───hungarian
+    │       errmsg.sys
+    │       
+    ├───italian
+    │       errmsg.sys
+    │       
+    ├───japanese
+    │       errmsg.sys
+    │       
+    ├───korean
+    │       errmsg.sys
+    │       
+    ├───norwegian
+    │       errmsg.sys
+    │       
+    ├───norwegian-ny
+    │       errmsg.sys
+    │       
+    ├───polish
+    │       errmsg.sys
+    │       
+    ├───portuguese
+    │       errmsg.sys
+    │       
+    ├───romanian
+    │       errmsg.sys
+    │       
+    ├───russian
+    │       errmsg.sys
+    │       
+    ├───serbian
+    │       errmsg.sys
+    │       
+    ├───slovak
+    │       errmsg.sys
+    │       
+    ├───spanish
+    │       errmsg.sys
+    │       
+    ├───swedish
+    │       errmsg.sys
+    │       
+    └───ukrainian
+            errmsg.sys
+            

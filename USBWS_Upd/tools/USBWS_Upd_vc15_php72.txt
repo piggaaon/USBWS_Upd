@@ -1,0 +1,5 @@
+php\libpq.dll
+php\license.txt
+php\php7apache2_4.dll
+php\php7ts.dll
+php\readme-redist-bins.txt
