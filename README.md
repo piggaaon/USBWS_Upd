@@ -15,7 +15,7 @@ MySQL,phpMyAdmin while still keeping it portable.
 ------------
 ## Install Instructions:
 
-Download and extract zip; to root of 
+Download and extract zip; to root of USBWS.
 
 ------------
 ## Setup Instructions:
@@ -28,7 +28,9 @@ Download and extract zip; to root of
 4. Logs are created for each time USBWS_Upd.bat is run, the logs are stored 
 in "USBWS_Upd\logs\". Exmaple log filename "USBWS_Upd_20190817_131216.log"
 
-4. Start Webserver and DB Sever (httpd and mydqld), check versions of servers.
+5. Start Webserver and DB Sever (httpd and mydqld), check versions of servers.
+
+------------
 
 **The Code for USBWS_Upd has been released under the MIT License:**
 
