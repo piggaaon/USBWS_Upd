@@ -8,15 +8,12 @@ rem Set Variables:
   rem Set rootpath to tools USBWS_Upd
   set "rootpathtools=%rootpath%\tools"
   rem Get current Date and Time
-  set hh=%time:~0,2%
-  if "%time:~0,1%"==" " set hh=0%hh:~1,1%
-  set datetime=%date:~-4,4%%date:~-10,2%%date:~-7,2%_%hh%%time:~3,2%%time:~6,2%
-    
+  for /f %%i in ('%rootpathtools%\date.exe +%%Y%%m%%d%%H%%M%%S') do set datetime1=%%i
   echo ========================================================================
 rem Display Setup Information
   echo Root ServerPath  : %rootpathserver%
   echo Root update Path : %rootpath%
-  echo Current Date     : %datetime%
+  echo Current Date     : %datetime1%
 rem Determine OS architecture x86 or x64 and set program path
 set sysarch=%PROCESSOR_ARCHITECTURE%
 if "%sysarch%"=="AMD64" (
@@ -79,14 +76,12 @@ if [%ApacheUpt%] == [1] (
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   echo Update Files:
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  rename %rootpath%\tmp\Apache24 apache2 
+  rename %rootpath%\tmp\Apache24 USBWS_HTTPd 
   rem Update Folders 
-  robocopy %rootpath%\tmp\apache2\ %rootpathserver%\apache2\ /XD * /MIR /Z /V /NP /XA:H /W:5
-  robocopy %rootpath%\tmp\apache2\modules\ %rootpathserver%\apache2\modules\ /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_HTTPd\ %rootpathserver%\USBWS_HTTPd\ /XD * /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_HTTPd\modules\ %rootpathserver%\USBWS_HTTPd\modules\ /MIR /Z /V /NP /XA:H /W:5
   rem Update Individual Files
-  echo Copying: apache2\bin\httpd.exe to httpd_usbwv8.exe
-  copy /y /v %rootpath%\tmp\apache2\bin\httpd.exe %rootpathserver%\apache2\bin\httpd_usbwv8.exe
-  for /f "tokens=*" %%a in (%rootpathtools%\USBWS_Upd_vc15_apache.txt) do (
+  for /f "tokens=*" %%a in (%rootpathtools%\USBWS_Upd_httpd.txt) do (
     echo Copying: %%a
     copy /y /v %rootpath%\tmp\%%a %rootpathserver%\%%a
   )
@@ -101,16 +96,16 @@ if [%PHPUpt%] == [1] (
   
   echo Extract Update:
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  %zpathtofile% x %rootpath%\%phpfl% -o%rootpath%\tmp\php -r -y
+  %zpathtofile% x %rootpath%\%phpfl% -o%rootpath%\tmp\USBWS_PHP -r -y
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   echo Update Files:
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   rem Update Folders 
-  robocopy %rootpath%\tmp\php\ext\ %rootpathserver%\php\ext\ /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_PHP\ext\ %rootpathserver%\USBWS_PHP\ext\ /MIR /Z /V /NP /XA:H /W:5
   rem Update Individual Files
-  echo Copying: php\libssh2.dll to apache2\bin\libssh2.dll
-  copy /y /v %rootpath%\tmp\php\libssh2.dll %rootpathserver%\apache2\bin\libssh2.dll
-  for /f "tokens=*" %%a in (%rootpathtools%\USBWS_Upd_vc15_php72.txt) do (
+  echo Copying: USBWS_PHP\libssh2.dll to apache2\bin\libssh2.dll
+  copy /y /v %rootpath%\tmp\USBWS_PHP\libssh2.dll %rootpathserver%\USBWS_HTTPd\bin\libssh2.dll
+  for /f "tokens=*" %%a in (%rootpathtools%\USBWS_Upd_php.txt) do (
     echo Copying: %%a
     copy /y /v %rootpath%\tmp\%%a %rootpathserver%\%%a
   )
@@ -130,13 +125,11 @@ if [%MariaDBUpt%] == [1] (
   echo Update Files:
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   set "mariadbflrt=!mariadbfl:~0,-4!
-  rename %rootpath%\tmp\!mariadbflrt! mysql
+  rename %rootpath%\tmp\!mariadbflrt! USBWS_DB
   rem Update Folders
-  robocopy %rootpath%\tmp\mysql\ %rootpathserver%\mysql\ /XF my.ini /XD * /MIR /Z /V /NP /XA:H /W:5
-  robocopy %rootpath%\tmp\mysql\share\ %rootpathserver%\mysql\share\ /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_DB\ %rootpathserver%\USBWS_DB\ /XF my.ini /XD * /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_DB\share\ %rootpathserver%\USBWS_DB\share\ /MIR /Z /V /NP /XA:H /W:5
   rem Update Individual Files
-  echo Copying: mysql\bin\mysqld.exe to mysqld_usbwv8.exe
-  copy /y /v %rootpath%\tmp\mysql\bin\mysqld.exe %rootpathserver%\mysql\bin\mysqld_usbwv8.exe
   for /f "tokens=*" %%a in (%rootpathtools%\USBWS_Upd_mariadb.txt) do (
     echo Copying: %%a
     copy /y /v %rootpath%\tmp\%%a %rootpathserver%\%%a
@@ -157,12 +150,12 @@ if [%PMAUpt%] == [1] (
   echo Update Files:
   echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   set "pmaflrt=!pmafl:~0,-4!
-  rename %rootpath%\tmp\!pmaflrt! pma
+  rename %rootpath%\tmp\!pmaflrt! USBWS_DBAdmin
   rem Update Individual Files
   rem Copy config to settings
-  copy /y /v %rootpathserver%\USBWS_DBAdmin\config.inc.php  %rootpathserver%\settings\config.inc.php
+  copy /y /v %rootpathserver%\USBWS_DBAdmin\config.inc.php  %rootpathserver%\USBWS_Settings\config.inc.php
   rem Update Folders
-  robocopy %rootpath%\tmp\pma\ %rootpathserver%\USBWS_DBAdmin\ /XF config.inc.php *.pem /MIR /Z /V /NP /XA:H /W:5
+  robocopy %rootpath%\tmp\USBWS_DBAdmin\ %rootpathserver%\USBWS_DBAdmin\ /XF config.inc.php *.pem /MIR /Z /V /NP /XA:H /W:5
   echo =====================================================================
 )
 
