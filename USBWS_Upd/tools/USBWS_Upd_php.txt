@@ -1,0 +1,5 @@
+USBWS_PHP\libpq.dll
+USBWS_PHP\license.txt
+USBWS_PHP\php8apache2_4.dll
+USBWS_PHP\php8ts.dll
+USBWS_PHP\readme-redist-bins.txt

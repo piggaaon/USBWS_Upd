@@ -1,0 +1,7 @@
+USBWS_DB\bin\mysql.exe
+USBWS_DB\bin\mysql_install_db.exe
+USBWS_DB\bin\mysql_upgrade.exe
+USBWS_DB\bin\mysqladmin.exe
+USBWS_DB\bin\mysqlcheck.exe
+USBWS_DB\bin\mysqld.exe
+USBWS_DB\bin\server.dll
