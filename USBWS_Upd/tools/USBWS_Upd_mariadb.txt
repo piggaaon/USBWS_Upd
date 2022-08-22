@@ -1,5 +1,0 @@
-mysql\bin\mysql.exe
-mysql\bin\mysqld.exe
-mysql\bin\mysqlcheck.exe
-mysql\bin\mysql_upgrade.exe
-mysql\bin\mysqladmin.exe
