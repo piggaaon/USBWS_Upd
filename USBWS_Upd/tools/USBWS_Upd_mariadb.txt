@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 USBWS_DB\bin\mysql.exe
 USBWS_DB\bin\mysqld.exe
 USBWS_DB\bin\mysqlcheck.exe
 USBWS_DB\bin\mysql_upgrade.exe
+=======
+USBWS_DB\bin\mysql.exe
+USBWS_DB\bin\mysqld.exe
+USBWS_DB\bin\mysqlcheck.exe
+USBWS_DB\bin\mysql_upgrade.exe
+>>>>>>> f1534bc (Update)
 USBWS_DB\bin\mysqladmin.exe
